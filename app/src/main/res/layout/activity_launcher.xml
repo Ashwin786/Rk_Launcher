@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".activity.launcher.MainActivity">
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        tools:listitem="@layout/grid_single"
+        android:stretchMode="columnWidth"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+
+    </GridView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/front_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <DigitalClock
+            android:id="@+id/simpleDigitalClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:background="#0000"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
